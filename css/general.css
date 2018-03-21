@@ -1,0 +1,354 @@
+/* Style for page */
+
+.btnSingle {
+	cursor: pointer;
+	width: 130px;
+	height: 80px;
+}
+
+.btnSingle[walkState="join"] {
+	background-color: #BCED91;
+}
+
+.btnSingle[walkState="join"]:hover {
+	background-color: #A6D785;
+}
+
+.btnSingle[walkState="leave"] {
+	background-color: #CD9B9B;
+}
+
+.btnSingle[walkState="leave"]:hover {
+	background-color: #BC8F8F;
+}
+
+.btnSingle[walkState|="no"] {
+	background-color: #FFFFFF;
+}
+
+#btnAutoJoin {
+	position: relative;
+	width: 200px;
+	cursor: pointer;
+	background-color: #FFFFFF;
+}
+
+#btnAutoJoin:hover {
+	background-color: #EAEAEA;
+}
+
+#btnSettings.AutoJoinButtonEnabled {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-color: transparent;
+}
+
+#btnSettings.AutoJoinButtonEnabled:hover {
+	filter: invert(100%);
+}
+
+#info {
+	position: relative;
+	width: 500px;
+	color: #FFFFFF
+}
+
+.pointsFloating {
+	position: fixed;
+	opacity: 0;
+}
+
+
+/* Style for options window */
+
+#settingsDiv {
+	visibility: hidden;
+	overflow-y: auto;
+	color: rgb(48, 57, 66);
+	width: 600px;
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: Cantarell, 'Segoe UI', Tahoma, sans-serif;
+	box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
+	background: white;
+	z-index: 8000;
+}
+
+#settingsDiv.fit {
+	top: 0;
+	bottom: 0;
+	transform: translate(-50%, 0);
+}
+
+#settingsDiv label {
+	display: inline-block;
+	color: rgb(48, 57, 66);
+}
+
+#settingsDiv #titlesList {
+	list-style: none;
+	margin: 20px;
+}
+
+#settingsDiv #titlesList .titleListItem {
+	color: black;
+	font-size: 1.2em;
+	margin-bottom: 0.8em;
+}
+
+#settingsDiv #titlesList ul {
+	list-style: none;
+	padding: 0;
+}
+
+#settingsDiv #titlesList ul li {
+	margin-left: 18px;
+	margin-bottom: 0.3em;
+}
+
+#settingsDiv input[type='checkbox'],
+#settingsDiv input[type='radio'] {
+	width: 13px;
+	height: 13px;
+	margin-right: 0.6em; /* As in the chrome://settings page */
+	margin-top: -3px;
+	vertical-align: middle;
+}
+
+#settingsDiv #btnSetSave,
+#settingsDiv #btnSetCancel {
+	padding: 10px;
+	width: 110px;
+	background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+	border: 1px solid rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08),
+	inset 0 1px 2px rgba(255, 255, 255, 0.75);
+	color: #444;
+	font: inherit;
+	margin: 0 1px 0 0;
+	outline: none;
+	text-shadow: 0 1px 0 rgb(240, 240, 240);
+}
+
+#settingsDiv #btnSetSave:hover,
+#settingsDiv #btnSetCancel:hover
+{
+	background-image: -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+	border-color: rgba(0, 0, 0, 0.3);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12),
+	inset 0 1px 2px rgba(255, 255, 255, 0.95);
+	color: black;
+}
+
+#settingsDiv #btnSetSave:focus,
+#settingsDiv #btnSetCancel:focus
+{
+	background-image: -webkit-linear-gradient(#e7e7e7, #e7e7e7 38%, #d7d7d7);
+	box-shadow: none;
+	text-shadow: none;
+}
+
+#settingsDiv #btnSetSave:active,
+#settingsDiv #btnSetCancel:active
+{
+	transition: border-color 200ms;
+	border-color: rgb(77, 144, 254);
+	outline: none;
+}
+
+#settingsDiv #btnSetSave:disabled {
+	color: green;
+}
+
+#settingsDiv #SaveCancelContainer {
+	text-align: center;
+	margin: 20px;
+}
+
+#settingsDiv #SaveCancelContainer > button {
+	margin: 0 10px 0 10px;
+}
+
+#settingsDiv #linksContainer {
+	display: flex;
+	padding: 0 30px;
+}
+
+#settingsDiv #linksContainer div {
+	width: 130px;
+	text-align: center;
+}
+
+#settingsDiv #linksContainer a > img,
+#settingsDiv #linksContainer a > span {
+	vertical-align: middle;
+}
+
+#settingsDiv input[type=number] {
+	width: 55px;
+}
+
+#settingsDiv a {
+	vertical-align: middle;
+	text-decoration: none;
+	color: rgb(17, 85, 204);
+}
+
+#settingsDiv a:hover > span {
+	text-decoration: underline;
+}
+
+#settingsDiv #volumeControl {
+	padding-left: 2em;
+}
+
+#settingsDiv #audioVolume {
+	width: 10em;
+	height: 10px;
+	padding: 0;
+}
+
+#settingsShade {
+	z-index: 7999;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.75);
+	width: 100%;
+	height: 100%;
+	opacity: 0.0;
+}
+
+.fadeIn {
+	animation: fadeIn 200ms forwards;
+}
+
+.fadeOut {
+	animation: fadeOut 200ms forwards;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0; visibility: visible;}
+	100% {opacity: 1; visibility: visible;}
+}
+
+@keyframes fadeOut {
+	0% {opacity: 1; visibility: visible;}
+	99% {opacity: 0; visibility: visible;}
+	100% {opacity: 0; visibility: hidden;}
+}
+
+#buttonsAJ:hover #suspensionNotice {
+	animation: pulse 3s infinite;
+}
+
+#suspensionNotice {
+	color: red;
+	margin-top: 1em;
+	font-weight: 600;
+}
+
+@keyframes pulse {
+	0% {
+		color: red;
+	  }
+	  50% {
+		  color: #9A9AFF;
+	  }
+	  100% {
+		  color: red;
+	  }
+}
+
+.suspensionWarningIcon {
+	color: #800000;
+}
+
+li:hover .suspensionWarning {
+	display: inline;
+}
+
+.suspensionWarning {
+	cursor: default;
+	display: none;
+	color: #800000;
+}
+
+.description {
+	cursor: pointer;
+}
+.descriptionContent {
+	display: none;
+}
+.descriptionContent.visible {
+	display: block;
+}
+
+#navbarPin {
+	height: 100%;
+	width: 19px;
+	padding-left: 10px;
+    align-items: center;
+}
+
+#navbarPin:hover {
+	cursor: pointer;
+}
+
+header.pinned {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 888;
+}
+
+#bufferEl.pinned {
+	height: 39px;
+}
+
+nav {
+	padding-left: 10px !important;
+}
+
+#ajFooter {
+	position: fixed;
+	bottom: 0;
+    right: 0;
+    left: 0;
+}
+#ajFooterArrowWrap {
+	cursor: pointer;
+	/* position: fixed; */
+	/* bottom: 0; */
+	margin-left: 2em;
+	font-size: 2em;
+	width: 2.5em;
+	text-align: center;
+	border-radius: 1em 1em 0 0;
+	color: white;
+	background-color: #95a4c0;
+}
+#ajFooter #ajFooterArrow {
+	transition: transform .4s;
+	user-select: none;
+}
+#ajFooter.pinned #ajFooterArrow {
+	transform: rotate(180deg);
+}
+#ajFooter.pinned .footer__outer-wrap {
+	max-height: 100%;
+	padding: 15px 25px;
+}
+#ajFooter .footer__outer-wrap {
+	background-color: #95a4c0;
+	transition: all 0.2s ease-in;
+	max-height: 0px;
+	padding: 0 25px;
+}

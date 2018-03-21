@@ -1,0 +1,26 @@
+div.page__outer-wrap {
+    filter: invert(100%);
+}
+
+div.page__outer-wrap .giveaway_image_thumbnail, 
+div.page__outer-wrap .giveaway_image_avatar,
+.comments .global__image-inner-wrap,
+.comment .global__image-inner-wrap,
+.table_image_thumbnail,
+.table_image_avatar,
+.comment__summary img,
+.markdown img
+{
+    filter: invert(100%);
+}
+
+.pointsFloating{
+	z-index: 2;
+	color: #BBBBBB !important;
+}
+
+body,
+#ajFooter #ajFooterArrowWrap,
+#ajFooter div.footer__outer-wrap {
+	background-color: #141414;
+}
